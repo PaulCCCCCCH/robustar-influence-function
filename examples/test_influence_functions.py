@@ -5,6 +5,7 @@ from train_influence_functions import load_model, load_data
 
 if __name__ == "__main__":
     config = ptif.get_default_config()
+    # config['recursion_depth'] = 1000
     model = load_model()
     trainloader, testloader = load_data()
     ptif.init_logging('logfile.log')

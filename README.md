@@ -1,4 +1,20 @@
-# Influence Functions for PyTorch
+# Note for Robustar dev
+
+Created an example in `examples/robustar.py`. To run this example, follow these steps:
+
+- Make sure you follow Robustar's dev setup instruction. 
+- Uninstall the official influence function package with `pip uninstall pytorch-influence-functions`.
+- Go to the root directory and run `pip install .` to install the modified version
+- `cd examples` and run `python robustar.py`. You should be able to see a few output files.
+
+You can change the configurations in `get_default_config` function in `examples/robustar.py`.
+
+## The problem
+The official example `test_influence_functions.py` runs OK with the default configs where `recursion_depth` is set to 1. However, it is recommended that `recursion_depth = len(training_set) / r_averaging`. When we set `recursion_depth` to something like 500, it will give OOM. 
+
+
+
+# Below is original README
 
 This is a PyTorch reimplementation of Influence Functions from the ICML2017 best paper:
 [Understanding Black-box Predictions via Influence Functions](https://arxiv.org/abs/1703.04730) by Pang Wei Koh and Percy Liang.

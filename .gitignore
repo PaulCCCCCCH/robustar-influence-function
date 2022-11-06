@@ -1,6 +1,7 @@
 *.pyc
-outdir/*
-data/*
+*.pth
+outdir
+data
 __pycache__/
 build/
 dist/
